@@ -1,22 +1,21 @@
-package com.javarush.task.pro.task03.task0302;
-
 import java.util.Scanner;
 
-/*
-Призывная кампания
-*/
+// Треугольник
 
 public class main {
-    public static void main(String[] args) {
-        String militaryCommissar = ", явитесь в военкомат";
-        Scanner console = new Scanner(System.in);
-        String name = console.nextLine();
-        int age = console.nextInt();
-        if (age >= 18 && age <= 28)
-            System.out.println(name + militaryCommissar);
-        else
-            System.out.println();
-        //напишите тут ваш код
-    }
-}
+    private static final String TRIANGLE_EXISTS = "треугольник существует";
+    private static final String TRIANGLE_NOT_EXISTS = "треугольник не существует";
 
+    public static void main(String[] args) {
+        Scanner console = new Scanner(System.in);
+        int a = console.nextInt();
+        int b = console.nextInt();
+        int c = console.nextInt();
+        if (a < (b+c) && b < (a+c) && c < (a+b)){
+            System.out.println(TRIANGLE_EXISTS);
+        }   else
+            System.out.println(TRIANGLE_NOT_EXISTS);
+    }
+
+    //напишите тут ваш код
+}
