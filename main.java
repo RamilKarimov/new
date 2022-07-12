@@ -1,21 +1,13 @@
 import java.util.Scanner;
-
-// Треугольник
-
 public class main {
-    private static final String TRIANGLE_EXISTS = "треугольник существует";
-    private static final String TRIANGLE_NOT_EXISTS = "треугольник не существует";
-
     public static void main(String[] args) {
+        String cold = "на улице холодно";
+        String warm = "на улице тепло";
         Scanner console = new Scanner(System.in);
-        int a = console.nextInt();
-        int b = console.nextInt();
-        int c = console.nextInt();
-        if (a < (b+c) && b < (a+c) && c < (a+b)){
-            System.out.println(TRIANGLE_EXISTS);
-        }   else
-            System.out.println(TRIANGLE_NOT_EXISTS);
+        int temp = console.nextInt();
+        if (temp < 0)
+            System.out.println("на улице холодно");
+        else
+            System.out.println("на улице тепло");
     }
-
-    //напишите тут ваш код
 }
